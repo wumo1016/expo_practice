@@ -1,6 +1,7 @@
 ## 封装
 
 - [路由导航](https://docs.expo.dev/router/introduction/)
+  - 要为目录创建布局路由，请在目录中创建名为 `_layout.js` 的文件
 - 接口
 - UI 库
 - 全局缓存

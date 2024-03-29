@@ -9,7 +9,7 @@ import { StyleSheet, Text, View } from 'react-native'
 export default function Home() {
   return (
     <View style={styles.container}>
-      <Text>首页</Text>
+      <Text>我的</Text>
     </View>
   )
 }
