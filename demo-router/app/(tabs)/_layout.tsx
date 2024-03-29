@@ -2,7 +2,7 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-03-29 17:15:59
+ * @LastEditTime: 2024-03-29 17:45:57
  */
 import { StyleSheet, Text } from 'react-native'
 import { Tabs } from 'expo-router'
@@ -21,7 +21,7 @@ export default function TabLayout() {
       }}
     >
       {tabList.map(tab => (
-        <Tabs.Screen name={tab.name}></Tabs.Screen>
+        <Tabs.Screen name={tab.name} key={tab.name}></Tabs.Screen>
       ))}
     </Tabs>
   )
