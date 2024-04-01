@@ -60,6 +60,7 @@ export default function TabLayout() {
 const styles = StyleSheet.create({
   header: {
     textAlign: 'center',
+    height: 50,
     lineHeight: 50,
     backgroundColor: '#fff',
     fontSize: 18
