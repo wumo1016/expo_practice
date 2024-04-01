@@ -2,9 +2,9 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-03-29 22:02:34
+ * @LastEditTime: 2024-04-01 15:03:06
  */
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text } from 'react-native'
 import { Tabs } from 'expo-router'
 import Icon from '@/components/icon'
 import { tabList } from './util'
@@ -31,14 +31,22 @@ export default function TabLayout() {
               color={focused ? tabStyle.activeColor : tabStyle.color}
             ></Icon>
           ),
-          tabBarActiveTintColor: tabStyle.activeColor,
           tabBarStyle: {
             color: tabStyle.color,
-            height: 46,
+            height: 50,
             paddingBottom: 6,
-            paddingTop: 6,
-            borderTopColor: 'gray'
-          }
+            paddingTop: 2
+          },
+          tabBarLabel: ({ focused }) => (
+            <Text
+              style={{
+                ...styles.tab,
+                color: focused ? tabStyle.activeColor : tabStyle.color
+              }}
+            >
+              {activeTab.label}
+            </Text>
+          )
         }
       }}
     >
@@ -53,6 +61,10 @@ const styles = StyleSheet.create({
   header: {
     textAlign: 'center',
     lineHeight: 50,
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
+    fontSize: 18
+  },
+  tab: {
+    fontSize: 12
   }
 })

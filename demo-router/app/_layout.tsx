@@ -2,9 +2,9 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-03-29 17:05:17
+ * @LastEditTime: 2024-04-01 14:59:06
  */
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context'
 import { Stack } from 'expo-router'
