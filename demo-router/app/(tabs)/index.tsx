@@ -2,9 +2,9 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-02 10:06:54
+ * @LastEditTime: 2024-04-02 10:13:43
  */
-import { Link, router } from 'expo-router'
+import { router } from 'expo-router'
 import { Button, StyleSheet, Text, View } from 'react-native'
 
 export default function Home() {
