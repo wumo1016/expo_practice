@@ -2,7 +2,7 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-02 10:13:43
+ * @LastEditTime: 2024-04-02 15:38:38
  */
 import { router } from 'expo-router'
 import { Button, StyleSheet, Text, View } from 'react-native'
