@@ -4,8 +4,9 @@
   - 要为目录创建布局路由，请在目录中创建名为 `_layout.js` 的文件
   - router
     - push
-    -
-- 图标
+    - back
+  - 获取路由参数: useLocalSearchParams
+- [图标](https://expo.nodejs.cn/guides/icons/#expovector-icons)
 - 接口
 - UI 库
 - 全局缓存
@@ -17,7 +18,6 @@
 
 ## 其他
 
-- 超出如何显示...
 - 扫码
 - debugger
 - 地图
@@ -25,6 +25,6 @@
 
 ## 预构建
 
-- `npx expo prebuild`: 为您的项目生成本机 Android 和 iOS 目录
+- `npx expo prebuild`: 为您的项目生成本机 android 和 ios 目录
 
 ## 打包发布
