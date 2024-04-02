@@ -38,59 +38,41 @@
 ## 打包发布
 
 - 安装脚手架 `npm install -g eas-cli`
-- `app.json` 添加一些内容
+- 登录 `eas login`
 
-```json
-{
-  "ios": {
-    "supportsTablet": true,
-    "bundleIdentifier": "com.yiban.learn"
-  },
-  "android": {
-    "adaptiveIcon": {
-      "foregroundImage": "./assets/images/adaptive-icon.png",
-      "backgroundColor": "#ffffff"
-    },
-    "package": "com.yiban.mis"
-  },
-  "extra": {
-    "router": {
-      "origin": false
-    },
-    "eas": {
-      "projectId": "0158cf08-b2e5-45b5-8dbc-135676ef7754"
-    }
-  }
-}
-```
-
-- 创建 `eas.json` 文件, 其内容为
-
-```json
-{
-  "cli": {
-    "version": ">= 0.49.0"
-  },
-  "ios": { "simulator": true },
-  "build": {
-    "preview": {
-      "android": {
-        "buildType": "apk"
-      },
-      "env": {
-        "REACT_APP_MODE": "prod"
-      }
-    },
-    "production": {}
-  },
-  "submit": {
-    "production": {}
-  }
-}
-```
-
-- 执行打包命令
+### 本地构建
 
 ```sh
+eas build --platform android --local
+```
+
+### 云构建
+
+- 执行 `eas build`
+
+```sh
+# 直接构建
+eas build
+
+# 分平台构建
+eas build -p android --profile preview
 eas build -p ios --profile preview
+```
+
+
+```sh
+# 需代理
+wsl --install
+wsl --list --online
+wsl --install -d Ubuntu
+
+# 打开 Ubuntu 命令行
+sudo apt-get update
+sudo apt install openjdk-17-jdk-headless gradle
+
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
+sudo apt-get install -y nodejs
+
+sudo dpkg --remove --force-remove-reinstreq libnode-dev
+sudo dpkg --remove --force-remove-reinstreq libnode72:amd64
 ```
