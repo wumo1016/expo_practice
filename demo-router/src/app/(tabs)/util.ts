@@ -2,9 +2,9 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-03-29 21:46:28
+ * @LastEditTime: 2024-04-02 14:47:40
  */
-import { IconType } from '@/components/icon'
+import { IconType } from '@c/icon'
 
 export interface ITabItem {
   name: string

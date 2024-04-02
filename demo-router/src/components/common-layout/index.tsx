@@ -2,12 +2,12 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-02 10:00:54
+ * @LastEditTime: 2024-04-02 14:56:23
  */
 import { StyleSheet, Text, View } from 'react-native'
 import { Stack, router } from 'expo-router'
-import Icon from '@/components/icon'
-import { ICommonLayout } from '@/types'
+import Icon from '@c/icon'
+import { ICommonLayout } from '@dts'
 
 // 默认值
 const defaultProps: Partial<ICommonLayout> = {

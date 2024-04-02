@@ -2,11 +2,11 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-01 15:03:06
+ * @LastEditTime: 2024-04-02 14:40:59
  */
 import { StyleSheet, Text } from 'react-native'
 import { Tabs } from 'expo-router'
-import Icon from '@/components/icon'
+import Icon from '@c/icon'
 import { tabList } from './util'
 
 // tab样式
