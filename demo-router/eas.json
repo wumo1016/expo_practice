@@ -1,16 +1,17 @@
 {
   "cli": {
-    "version": ">= 0.49.0"
+    "version": ">= 7.6.2"
   },
-  "ios": { "simulator": true },
   "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
     "preview": {
       "android": {
         "buildType": "apk"
       },
-      "env": {
-        "REACT_APP_MODE": "prod"
-      }
+      "distribution": "internal"
     },
     "production": {}
   },
