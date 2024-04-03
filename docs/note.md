@@ -40,6 +40,16 @@
 - 安装脚手架 `npm install -g eas-cli`
 - 登录 `eas login`
 
+## 本地开发
+
+```sh
+# 首次构建
+eas build --profile development --platform android
+
+# 安装远程线上apk
+eas build:run -p android
+```
+
 ### 本地构建
 
 ```sh
