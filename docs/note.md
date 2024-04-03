@@ -43,7 +43,8 @@
 ### 本地构建
 
 ```sh
-eas build --platform android --local
+npm run prebuild:android
+expo run:android --variant release
 ```
 
 ### 云构建
@@ -58,7 +59,6 @@ eas build
 eas build -p android --profile preview
 eas build -p ios --profile preview
 ```
-
 
 ```sh
 # 需代理
