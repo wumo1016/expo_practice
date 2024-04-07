@@ -67,25 +67,4 @@ expo run:android --variant release
 ```sh
 # 直接构建
 eas build
-
-# 分平台构建
-eas build -p android --profile preview
-eas build -p ios --profile preview
-```
-
-```sh
-# 需代理
-wsl --install
-wsl --list --online
-wsl --install -d Ubuntu
-
-# 打开 Ubuntu 命令行
-sudo apt-get update
-sudo apt install openjdk-17-jdk-headless gradle
-
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
-sudo apt-get install -y nodejs
-
-sudo dpkg --remove --force-remove-reinstreq libnode-dev
-sudo dpkg --remove --force-remove-reinstreq libnode72:amd64
 ```
