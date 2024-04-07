@@ -2,16 +2,11 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-07 17:03:25
+ * @LastEditTime: 2024-04-07 18:04:44
  */
 import { StyleSheet } from 'react-native'
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context'
-import { Stack, router, useRootNavigationState, usePathname } from 'expo-router'
-import { useEffect } from 'react'
-
-export const unstable_settings = {
-  initialRouteName: 'tabs'
-}
+import { Stack } from 'expo-router'
 
 export default function AppLayout() {
   return (

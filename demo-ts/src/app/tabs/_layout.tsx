@@ -2,7 +2,7 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-07 16:53:56
+ * @LastEditTime: 2024-04-07 18:04:12
  */
 import { StyleSheet, Text } from 'react-native'
 import { Tabs } from 'expo-router'
@@ -18,7 +18,6 @@ const tabStyle = {
 export default function TabLayout() {
   return (
     <Tabs
-      initialRouteName="home/index"
       screenOptions={({ route }) => {
         const activeTab = tabList.find(tab => tab.name === route.name)!
         return {
