@@ -7,7 +7,10 @@
     "dev": "expo start --dev-client",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "prebuild:android": "expo prebuild --platform android",
+    "build:android": "eas build --platform android",
+    "build:ios": "eas build --platform ios"
   },
   "dependencies": {
     "expo": "~50.0.14",
