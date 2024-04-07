@@ -43,6 +43,9 @@
 ## 本地开发
 
 ```sh
+# 安装包
+npx expo install expo-dev-client
+
 # 首次构建
 eas build --profile development --platform android
 

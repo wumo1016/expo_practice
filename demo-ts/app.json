@@ -6,14 +6,13 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "scheme": "myapp",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -31,6 +30,7 @@
       "eas": {
         "projectId": "6a410686-c140-4986-80e8-5d3a8be0de5a"
       }
-    }
+    },
+    "plugins": ["expo-router"]
   }
 }
