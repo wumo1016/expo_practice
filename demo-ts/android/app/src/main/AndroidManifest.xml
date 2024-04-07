@@ -26,6 +26,8 @@
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
         <data android:scheme="com.wumowyb.demots"/>
+        <data android:scheme="myapp"/>
+        <data android:scheme="exp+demo-ts"/>
       </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false"/>
