@@ -2,8 +2,9 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-07 17:13:34
+ * @LastEditTime: 2024-04-07 17:42:13
  */
+import { Storage } from '@u/storage'
 import { router } from 'expo-router'
 import { Button, StyleSheet, Text, View } from 'react-native'
 
@@ -21,6 +22,16 @@ export default function Home() {
             }
           })
         }
+      ></Button>
+      <Button
+        title="设置缓存"
+        onPress={() => Storage.set('token', 123456)}
+      ></Button>
+      <Button
+        title="获取缓存"
+        onPress={() => {
+          console.log(Storage.get('token'))
+        }}
       ></Button>
     </View>
   )

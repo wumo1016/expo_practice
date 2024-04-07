@@ -19,9 +19,9 @@
   - clearAll
 - 接口
 - 字体
-- 国际化
 - 公共样式
 - 静态资源
+- 国际化
 
 ## 其他
 
@@ -46,7 +46,7 @@
 # 安装包
 npx expo install expo-dev-client
 
-# 首次构建
+# 首次构建(更新第三方包后也需构建)
 eas build --profile development --platform android
 
 # 安装远程线上apk
