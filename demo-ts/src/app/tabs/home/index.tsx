@@ -2,33 +2,34 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-07 11:53:22
+ * @LastEditTime: 2024-04-07 17:13:34
  */
-import { StyleSheet, Text, View } from 'react-native'
+import { router } from 'expo-router'
+import { Button, StyleSheet, Text, View } from 'react-native'
 
-// tab样式
-const tabStyle = {
-  color: '#000',
-  activeColor: 'blue'
-}
-
-export default function TabLayout() {
+export default function Home() {
   return (
-    <View>
-      <Text>首页</Text>
+    <View style={styles.container}>
+      <Text style={{ marginBottom: 50 }}>首页</Text>
+      <Button
+        title="测试1页面"
+        onPress={() =>
+          router.push({
+            pathname: '/home/test1',
+            params: {
+              name: 'test1'
+            }
+          })
+        }
+      ></Button>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  header: {
-    textAlign: 'center',
-    height: 50,
-    lineHeight: 50,
-    backgroundColor: '#fff',
-    fontSize: 18
-  },
-  tab: {
-    fontSize: 12
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 })
