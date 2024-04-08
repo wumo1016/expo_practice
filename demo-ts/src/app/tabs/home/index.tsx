@@ -2,12 +2,11 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-08 20:46:26
+ * @LastEditTime: 2024-04-08 21:52:08
  */
 import { router } from 'expo-router'
 import { Button, StyleSheet, Text, View } from 'react-native'
 import { Toast, useToast } from '@gluestack-ui/themed'
-import { Storage } from '@u/storage'
 import { SystemApi } from '@a/system'
 import { TState, setToken } from '@src/store'
 import { useDispatch, useSelector } from 'react-redux'
@@ -35,14 +34,12 @@ export default function Home() {
       <Button
         title="设置缓存"
         onPress={() => {
-          Storage.set('token', 123456)
           dispatch(setToken(123456))
         }}
       ></Button>
       <Button
         title="清除缓存"
         onPress={() => {
-          Storage.delete('token')
           dispatch(setToken(''))
         }}
       ></Button>
