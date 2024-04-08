@@ -18,6 +18,9 @@
   - delete
   - clearAll
 - 接口
+  - axios
+- UI 库使用
+- 状态管理(mobx)
 - 字体
 - 公共样式
 - 静态资源

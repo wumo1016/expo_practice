@@ -2,12 +2,12 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-08 10:37:47
+ * @LastEditTime: 2024-04-08 11:46:57
  */
-import { Storage } from '@u/storage'
 import { router } from 'expo-router'
-import { useEffect, useState } from 'react'
 import { Button, StyleSheet, Text, View } from 'react-native'
+import { Storage } from '@u/storage'
+import { SystemApi } from '@a/system'
 
 export default function Home() {
   return (
@@ -33,6 +33,19 @@ export default function Home() {
         title="获取缓存"
         onPress={() => {
           console.log(Storage.get('token'))
+        }}
+      ></Button>
+      <Button
+        title="登录"
+        onPress={() => {
+          SystemApi.login({
+            username: 'sysadmin',
+            password: '123456',
+            verifycode: '',
+            mode: 'LOCAL'
+          }).then(res => {
+            console.log(res)
+          })
         }}
       ></Button>
     </View>
