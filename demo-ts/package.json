@@ -10,6 +10,7 @@
     "web": "expo start --web",
     "prebuild:android": "expo prebuild --platform android",
     "devbuild:android": "eas build --profile development --platform android",
+    "build": "eas build",
     "build:android": "eas build --platform android",
     "build:ios": "eas build --platform ios"
   },
