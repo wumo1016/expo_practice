@@ -19,7 +19,7 @@
   - clearAll
 - 接口
   - axios
-- [UI 库](https://nativebase.io/)
+- [UI 库](https://gluestack.io/ui/docs/overview/introduction)
 - 状态管理(mobx)
 - 字体
 - 公共样式

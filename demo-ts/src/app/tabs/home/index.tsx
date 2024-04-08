@@ -2,12 +2,12 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-08 14:05:08
+ * @LastEditTime: 2024-04-08 18:09:35
  */
 import { router } from 'expo-router'
 import { Button, StyleSheet, Text, View } from 'react-native'
 import { useState } from 'react'
-import { useToast } from 'native-base'
+import { Toast, useToast } from '@gluestack-ui/themed'
 import { Storage } from '@u/storage'
 import { SystemApi } from '@a/system'
 
@@ -60,8 +60,12 @@ export default function Home() {
         title="提示"
         onPress={() => {
           toast.show({
-            title: '你好啊',
-            placement: 'top'
+            placement: 'top',
+            render: () => (
+              <Toast testID="aaa" action="attention" variant="solid">
+                <Text>测试消息</Text>
+              </Toast>
+            )
           })
         }}
       ></Button>

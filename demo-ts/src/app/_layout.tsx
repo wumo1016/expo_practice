@@ -2,22 +2,23 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-08 13:40:46
+ * @LastEditTime: 2024-04-08 18:07:56
  */
 import { StyleSheet } from 'react-native'
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context'
 import { Stack } from 'expo-router'
-import { NativeBaseProvider } from 'native-base'
+import { GluestackUIProvider } from '@gluestack-ui/themed'
+import { config } from '@gluestack-ui/config'
 
 export default function AppLayout() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.safeArea}>
-        <NativeBaseProvider>
+        <GluestackUIProvider config={config}>
           <Stack>
             <Stack.Screen name="tabs" options={{ headerShown: false }} />
           </Stack>
-        </NativeBaseProvider>
+        </GluestackUIProvider>
       </SafeAreaView>
     </SafeAreaProvider>
   )
