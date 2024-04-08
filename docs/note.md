@@ -9,7 +9,6 @@
 - [图标](https://expo.nodejs.cn/guides/icons/#expovector-icons)
 - [缓存 react-native-mmkv](https://github.com/mrousavy/react-native-mmkv)
   - set
-  - get
   - getString
   - getNumber
   - getBoolean
