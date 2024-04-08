@@ -20,7 +20,8 @@
 - 接口
   - axios
 - [UI 库](https://gluestack.io/ui/docs/overview/introduction)
-- 状态管理(mobx)
+- 状态管理(redux)-持久化缓存
+  - `npm i @reduxjs/toolkit react-redux redux-persist`
 - 字体
 - 公共样式
 - 静态资源

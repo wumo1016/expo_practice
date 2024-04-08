@@ -9,6 +9,8 @@
       "@sty/*": ["src/style/*"],
       "@u": ["src/utils"],
       "@u/*": ["src/utils/*"],
+      "@s": ["src/store"],
+      "@s/*": ["src/store/*"],
       "@cts": ["src/constants"],
       "@cts/*": ["src/constants/*"],
       "@dts": ["src/types"],

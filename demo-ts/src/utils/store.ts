@@ -4,8 +4,7 @@
  * @LastEditors: wyb
  * @LastEditTime: 2024-04-08 20:39:55
  */
-
-import store from '@src/store'
+import store from '@s'
 
 /**
  * @Author: wyb
