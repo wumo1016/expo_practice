@@ -2,18 +2,21 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-08 18:09:35
+ * @LastEditTime: 2024-04-08 20:46:26
  */
 import { router } from 'expo-router'
 import { Button, StyleSheet, Text, View } from 'react-native'
-import { useState } from 'react'
 import { Toast, useToast } from '@gluestack-ui/themed'
 import { Storage } from '@u/storage'
 import { SystemApi } from '@a/system'
+import { TState, setToken } from '@src/store'
+import { useDispatch, useSelector } from 'react-redux'
 
 export default function Home() {
   const toast = useToast()
-  const [token, setToken] = useState('')
+  const token = useSelector((state: TState) => state.global.token)
+  const dispatch = useDispatch()
+
   return (
     <View style={styles.container}>
       <Text style={{ marginBottom: 20 }}>首页</Text>
@@ -33,14 +36,14 @@ export default function Home() {
         title="设置缓存"
         onPress={() => {
           Storage.set('token', 123456)
-          setToken(Storage.get('token'))
+          dispatch(setToken(123456))
         }}
       ></Button>
       <Button
         title="清除缓存"
         onPress={() => {
           Storage.delete('token')
-          setToken(Storage.get('token'))
+          dispatch(setToken(''))
         }}
       ></Button>
       <Button
