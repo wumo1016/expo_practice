@@ -2,10 +2,11 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-07 17:42:13
+ * @LastEditTime: 2024-04-08 10:37:47
  */
 import { Storage } from '@u/storage'
 import { router } from 'expo-router'
+import { useEffect, useState } from 'react'
 import { Button, StyleSheet, Text, View } from 'react-native'
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
         title="设置缓存"
         onPress={() => Storage.set('token', 123456)}
       ></Button>
+      <Button title="清除缓存" onPress={() => Storage.delete('token')}></Button>
       <Button
         title="获取缓存"
         onPress={() => {
