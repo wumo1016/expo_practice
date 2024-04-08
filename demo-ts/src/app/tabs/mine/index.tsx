@@ -2,12 +2,15 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-07 11:52:50
+ * @LastEditTime: 2024-04-08 13:59:15
  */
 import { router } from 'expo-router'
-import { Button, StyleSheet, Text, View } from 'react-native'
+import { Input, TextArea } from 'native-base'
+import { useState } from 'react'
+import { Button, StyleSheet, Text, TextInput, View } from 'react-native'
 
 export default function TabLayout() {
+  const [value, onChangeText] = useState('Useless Placeholder')
   return (
     <View style={styles.container}>
       <Text style={{ marginBottom: 50 }}>我的</Text>
@@ -22,6 +25,19 @@ export default function TabLayout() {
           })
         }
       ></Button>
+      <TextInput
+        style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+        onChangeText={text => onChangeText(text)}
+        value={value}
+      />
+      <Input mx="3" placeholder="Input" w="100%" />
+      <TextArea
+        h={20}
+        placeholder="Text Area Placeholder"
+        w="75%"
+        maxW="300"
+        autoCompleteType
+      />
     </View>
   )
 }

@@ -2,14 +2,16 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-08 11:46:57
+ * @LastEditTime: 2024-04-08 13:46:56
  */
 import { router } from 'expo-router'
 import { Button, StyleSheet, Text, View } from 'react-native'
+import { useToast } from 'native-base'
 import { Storage } from '@u/storage'
 import { SystemApi } from '@a/system'
 
 export default function Home() {
+  const toast = useToast()
   return (
     <View style={styles.container}>
       <Text style={{ marginBottom: 50 }}>首页</Text>
@@ -45,6 +47,15 @@ export default function Home() {
             mode: 'LOCAL'
           }).then(res => {
             console.log(res)
+          })
+        }}
+      ></Button>
+      <Button
+        title="提示"
+        onPress={() => {
+          toast.show({
+            title: '你好啊',
+            placement: 'top'
           })
         }}
       ></Button>

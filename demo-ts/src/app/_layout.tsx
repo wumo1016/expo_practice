@@ -2,19 +2,22 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-07 18:04:44
+ * @LastEditTime: 2024-04-08 13:40:46
  */
 import { StyleSheet } from 'react-native'
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context'
 import { Stack } from 'expo-router'
+import { NativeBaseProvider } from 'native-base'
 
 export default function AppLayout() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.safeArea}>
-        <Stack>
-          <Stack.Screen name="tabs" options={{ headerShown: false }} />
-        </Stack>
+        <NativeBaseProvider>
+          <Stack>
+            <Stack.Screen name="tabs" options={{ headerShown: false }} />
+          </Stack>
+        </NativeBaseProvider>
       </SafeAreaView>
     </SafeAreaProvider>
   )
