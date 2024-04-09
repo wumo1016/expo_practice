@@ -2,7 +2,7 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-08 21:52:08
+ * @LastEditTime: 2024-04-09 10:58:31
  */
 import { router } from 'expo-router'
 import { Button, StyleSheet, Text, View } from 'react-native'
@@ -32,18 +32,6 @@ export default function Home() {
         }
       ></Button>
       <Button
-        title="设置缓存"
-        onPress={() => {
-          dispatch(setToken(123456))
-        }}
-      ></Button>
-      <Button
-        title="清除缓存"
-        onPress={() => {
-          dispatch(setToken(''))
-        }}
-      ></Button>
-      <Button
         title="登录"
         onPress={() => {
           SystemApi.login({
@@ -52,8 +40,14 @@ export default function Home() {
             verifycode: '',
             mode: 'LOCAL'
           }).then(res => {
-            console.log(res)
+            dispatch(setToken(res.Token))
           })
+        }}
+      ></Button>
+      <Button
+        title="清除缓存"
+        onPress={() => {
+          dispatch(setToken(''))
         }}
       ></Button>
       <Button
