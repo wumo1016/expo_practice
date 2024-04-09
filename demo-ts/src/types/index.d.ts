@@ -8,7 +8,7 @@
 import { ExpoRoot } from 'expo-router'
 
 // 公共布局组件 props
-export interface ICommonLayout {
+export interface IYbLayout {
   showHeader?: boolean // 是否显示header
   title: string // 标题
   children: React.ReactNode

@@ -2,12 +2,13 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-08 20:38:39
+ * @LastEditTime: 2024-04-09 14:38:35
  */
 
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
+  loading: false,
   token: '',
   userInfo: {}
 }
@@ -16,9 +17,12 @@ const globalStore = createSlice({
   name: 'global',
   initialState,
   reducers: {
+    setLoading(state, { payload }) {
+      state.loading = payload
+    },
     /**
      * @Author: wyb
-     * @Descripttion:
+     * @Descripttion: 设置token
      * @param {*} state
      * @param {*} param2
      */
@@ -30,4 +34,4 @@ const globalStore = createSlice({
 
 export const globalReducer = globalStore.reducer
 
-export const { setToken } = globalStore.actions
+export const { setToken, setLoading } = globalStore.actions

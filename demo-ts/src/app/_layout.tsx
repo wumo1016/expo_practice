@@ -2,32 +2,32 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-08 21:32:40
+ * @LastEditTime: 2024-04-09 14:34:06
  */
 import { StyleSheet } from 'react-native'
-import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import { Stack } from 'expo-router'
 import { GluestackUIProvider } from '@gluestack-ui/themed'
 import { config } from '@gluestack-ui/config'
-import { Provider } from 'react-redux'
+import { Provider as ReduxProvider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import store, { persistor } from '@s'
+import { YbLoading } from '@c'
 
 export default function AppLayout() {
   return (
-    <SafeAreaProvider>
-      <SafeAreaView style={styles.safeArea}>
-        <GluestackUIProvider config={config}>
-          <Provider store={store}>
-            <PersistGate loading={null} persistor={persistor}>
-              <Stack>
-                <Stack.Screen name="tabs" options={{ headerShown: false }} />
-              </Stack>
-            </PersistGate>
-          </Provider>
-        </GluestackUIProvider>
-      </SafeAreaView>
-    </SafeAreaProvider>
+    <GluestackUIProvider config={config}>
+      <ReduxProvider store={store}>
+        <PersistGate persistor={persistor}>
+          <YbLoading></YbLoading>
+          <SafeAreaView style={styles.safeArea}>
+            <Stack>
+              <Stack.Screen name="tabs" options={{ headerShown: false }} />
+            </Stack>
+          </SafeAreaView>
+        </PersistGate>
+      </ReduxProvider>
+    </GluestackUIProvider>
   )
 }
 

@@ -2,7 +2,7 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-09 10:58:31
+ * @LastEditTime: 2024-04-09 14:38:55
  */
 import { router } from 'expo-router'
 import { Button, StyleSheet, Text, View } from 'react-native'
@@ -10,6 +10,7 @@ import { Toast, useToast } from '@gluestack-ui/themed'
 import { SystemApi } from '@a/system'
 import { TState, setToken } from '@src/store'
 import { useDispatch, useSelector } from 'react-redux'
+import { setLoading } from '@s/modules/global'
 
 export default function Home() {
   const toast = useToast()
@@ -34,14 +35,19 @@ export default function Home() {
       <Button
         title="登录"
         onPress={() => {
+          dispatch(setLoading(true))
           SystemApi.login({
             username: 'sysadmin',
             password: '123456',
             verifycode: '',
             mode: 'LOCAL'
-          }).then(res => {
-            dispatch(setToken(res.Token))
           })
+            .then(res => {
+              dispatch(setToken(res.Token))
+            })
+            .finally(() => {
+              dispatch(setLoading(false))
+            })
         }}
       ></Button>
       <Button

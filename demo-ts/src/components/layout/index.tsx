@@ -2,19 +2,19 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-07 17:15:06
+ * @LastEditTime: 2024-04-09 14:26:16
  */
 import { StyleSheet, Text, View } from 'react-native'
 import { Stack, router } from 'expo-router'
-import Icon from '@c/icon'
-import { ICommonLayout } from '@dts'
+import { IYbLayout } from '@dts'
+import YbIcon from '../icon'
 
 // 默认值
-const defaultProps: Partial<ICommonLayout> = {
+const defaultProps: Partial<IYbLayout> = {
   showHeader: true
 }
 
-export default function CommonLayout(props: ICommonLayout) {
+export default function Layout(props: IYbLayout) {
   props = Object.assign({ ...defaultProps }, props)
   return (
     <View style={{ flex: 1 }}>
@@ -23,7 +23,11 @@ export default function CommonLayout(props: ICommonLayout) {
           headerShown: props.showHeader,
           header: () => (
             <View style={styles.header}>
-              <Icon name="back" size={18} onPress={() => router.back()}></Icon>
+              <YbIcon
+                name="back"
+                size={18}
+                onPress={() => router.back()}
+              ></YbIcon>
               <Text style={styles.headerText} numberOfLines={1}>
                 {props.title}
               </Text>
