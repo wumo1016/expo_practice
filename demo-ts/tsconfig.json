@@ -11,6 +11,8 @@
       "@sty/*": ["src/style/*"],
       "@u": ["src/utils"],
       "@u/*": ["src/utils/*"],
+      "@h": ["src/hooks"],
+      "@h/*": ["src/hooks/*"],
       "@s": ["src/store"],
       "@s/*": ["src/store/*"],
       "@cts": ["src/constants"],

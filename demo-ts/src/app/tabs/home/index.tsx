@@ -2,20 +2,21 @@
  * @Description:
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2024-04-09 14:38:55
+ * @LastEditTime: 2024-04-09 16:32:14
  */
 import { router } from 'expo-router'
 import { Button, StyleSheet, Text, View } from 'react-native'
-import { Toast, useToast } from '@gluestack-ui/themed'
 import { SystemApi } from '@a/system'
 import { TState, setToken } from '@src/store'
 import { useDispatch, useSelector } from 'react-redux'
 import { setLoading } from '@s/modules/global'
+import { useMessgae } from '@h'
 
 export default function Home() {
-  const toast = useToast()
   const token = useSelector((state: TState) => state.global.token)
   const dispatch = useDispatch()
+
+  const message = useMessgae()
 
   return (
     <View style={styles.container}>
@@ -44,6 +45,7 @@ export default function Home() {
           })
             .then(res => {
               dispatch(setToken(res.Token))
+              message.error('登录成功')
             })
             .finally(() => {
               dispatch(setLoading(false))
@@ -54,19 +56,6 @@ export default function Home() {
         title="清除缓存"
         onPress={() => {
           dispatch(setToken(''))
-        }}
-      ></Button>
-      <Button
-        title="提示"
-        onPress={() => {
-          toast.show({
-            placement: 'top',
-            render: () => (
-              <Toast testID="aaa" action="attention" variant="solid">
-                <Text>测试消息</Text>
-              </Toast>
-            )
-          })
         }}
       ></Button>
     </View>
