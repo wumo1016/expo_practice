@@ -6,6 +6,7 @@
     "paths": {
       "@a/*": ["src/api/*"],
       "@c/*": ["src/components/*"],
+      "@sty": ["src/style"],
       "@sty/*": ["src/style/*"],
       "@u": ["src/utils"],
       "@u/*": ["src/utils/*"],
