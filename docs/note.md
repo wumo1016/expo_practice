@@ -22,7 +22,6 @@
 - 状态管理(redux)-持久化缓存
   - `npm i @reduxjs/toolkit react-redux redux-persist`
 - 字体
-- 静态资源
 - 国际化
 
 ## 其他
