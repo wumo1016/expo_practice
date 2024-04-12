@@ -30,6 +30,8 @@
 - 扫码
 - debugger
 - 地图
+- 其他组件
+  - 滚动输入框到聚焦区: `react-native-keyboard-aware-scroll-view`
 
 ## 预构建
 
