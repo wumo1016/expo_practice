@@ -21,6 +21,9 @@
 - [UI 库](https://gluestack.io/ui/docs/overview/introduction)
 - 状态管理(redux)-持久化缓存
   - `npm i @reduxjs/toolkit react-redux redux-persist`
+- 事件管理
+- 消息提示
+- 全局 loading
 - 字体
 - 国际化
 
