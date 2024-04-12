@@ -24,6 +24,8 @@
 - 事件管理
 - 消息提示
 - 全局 loading
+- [表单验证](https://react-hook-form.com/get-started#ReactNative)
+
 - 字体
 - 国际化
 
